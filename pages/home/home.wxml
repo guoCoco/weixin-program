@@ -1,0 +1,3 @@
+<!--index.wxml-->
+<view> Hello {{name}}! </view>
+<button bindtap="changeName"> Click me! </button>
