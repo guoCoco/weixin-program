@@ -1,0 +1,52 @@
+
+.board image {
+  width: 100%;
+  height: 300px;
+  border-bottom: 1px solid #eee;
+}
+
+.songlist {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  font-size: 0.8rem;
+}
+
+.songitem{
+  height: 3rem;
+  line-height: 1.5rem;
+  display: flex;
+  border-bottom: 1px solid #eee;
+  position: 10rpx;
+  width: 100%;
+}
+
+.songitem:active {
+  background: #eee;
+}
+
+.song-play{
+  width: 10%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.song-play image {
+  line-height: 3rem;
+  width: 50rpx;
+  height: 50rpx;
+  padding-top: 13px;
+}
+
+.song-detail {
+  width: 90%;
+  white-space: nowrap;
+}
+
+.song-title {
+  font-size: 1rem;
+}
+
+.song-subtitle {
+  color: #555;
+}

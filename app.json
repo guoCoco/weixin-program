@@ -2,7 +2,14 @@
   "pages":[
     "pages/home/home",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/star/star",
+    "pages/product/product",
+    "pages/starList/starList",
+    "pages/helthInfo/helthInfo",
+    "pages/musicList/musicList",
+    "pages/play/play",
+    "pages/life/life",
+    "pages/weather/weather"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -10,23 +17,28 @@
     "navigationBarTitleText": "小程序-test",
     "navigationBarTextStyle":"black",
     "backgroundColor": "#ffffff",
-    "enablePullDownRefresh": true,
+    "enablePullDownRefresh": false,
     "onReachBottomDistance": 100
   },
   "tabBar": {
     "list": [{
       "pagePath": "pages/home/home",
-      "text": "首页",
+      "text": "音乐列表",
       "iconPath": "image/icon_API.png",
       "selectedIconPath": "image/icon_API_HL.png"
     },{
-      "pagePath": "pages/index/index",
-      "text": "我的",
+      "pagePath": "pages/life/life",
+      "text": "历史的今天",
       "iconPath": "image/wechat.png",
       "selectedIconPath": "image/wechatHL.png"
     },{
-      "pagePath": "pages/logs/logs",
-      "text": "日志",
+      "pagePath": "pages/star/star",
+      "text": "星座",
+      "iconPath": "image/icon_component.png",
+      "selectedIconPath": "image/icon_component_HL.png"
+    },{
+      "pagePath": "pages/weather/weather",
+      "text": "天气",
       "iconPath": "image/icon_component.png",
       "selectedIconPath": "image/icon_component_HL.png"
     }],

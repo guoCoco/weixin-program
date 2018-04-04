@@ -1,0 +1,23 @@
+<!-- 上下滑动组件 -->
+<scroll-view scroll-y='true'>
+	<!-- board 图版部分 -->
+	<view class='board'>
+		<image src='{{board}}'/>
+	</view>
+
+	<!-- 歌曲列表部分 -->
+	<view class='songlist'>
+		<block wx:for='{{songlist}}' wx:key='song_id'>
+			<view class='songitem'>
+				<navigator url='../play/play?songid={{item.songid}}' class='song-play'>
+					<image src='../../image/play.jpg' />
+				</navigator>
+				<navigator url='../play/play?songid={{item.songid}}' class='song-detail'>
+					<view class='song-title'>{{item.songname}}</view>
+					<view class='song-subtitle'>{{item.singername}} - {{item.seconds}}</view>
+				</navigator>
+			</view>
+		</block>
+	</view>
+	<loading hidden='{{!loading}}'>正在加载音乐。。。。</loading>
+</scroll-view>

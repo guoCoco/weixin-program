@@ -1,0 +1,18 @@
+<view class="playing container">
+  <view class="thumbnail">
+    <image src='{{song.albumpic_small}}'/>
+  </view>
+  <view class='detail'>
+  	<view class='title'>
+  	
+  	</view>
+  	<view class='author'>
+  	
+	</view>
+	<view class='action'>
+	  	<view class='act-toggle' bindtap='playToggle'>
+  			<image src="../../image/{{isPlaying? 'pause.png':'play.png'}}" />
+  		</view>
+	</view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<view class='container'>
+ <view class='title'>历史上{{month}}月{{day}}日发生了什么</view>
+ <view class='content'>
+    <block class='infoHis' wx:for='{{ranks}}'>
+      <view> {{item.year }} --- {{item.title}}</view>
+      <view><image src='{{item.img}}'/></view>
+    </block>  
+ </view>
+</view>

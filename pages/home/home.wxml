@@ -1,3 +1,117 @@
-<!--index.wxml-->
-<view> Hello {{name}}! </view>
-<button bindtap="changeName"> Click me! </button>
+<!-- index.wxml-->
+<!-- <view> Hello {{name}}! </view>
+<button bindtap="changeName"> 按钮 </button>
+<view bindtap='clickEvent'>水电费</view>
+
+<navigator url='../index/index' open-type='switchTab'>打开新页面</navigator> --> 
+
+<!-- 注释 -->
+<!-- 列表渲染 -->
+<!-- <view wx:for-items='{{array}}'>{{item}}</view>
+<view wx:for='{{arrays}}' wx:for-index='idx' wx:for-item='itemName'>{{idx}}: {{itemName.msg}}</view>
+<!循环渲染 --> 
+<!-- <view wx:if='{{view === "a"}}'>a</view>
+<view wx:elif='{{view === "b"}}'>b</view>
+<view wx:else='{{view === "c"}}'>c</view> -->
+<!-- 模板 -->
+<!-- <template name="staffName">
+  <view>
+    FirstName: {{firstName}}, LastName: {{lastName}}
+  </view>
+</template>
+
+<template is="staffName" data="{{...staffA}}"></template>
+<template is="staffName" data="{{...staffB}}"></template>
+<template is="staffName" data="{{...staffC}}"></template>
+
+<view id="item-{{id}}"> 组件属性</view>
+<view wx:if='{{condition}}'>控制属性</view> -->
+<!-- 不能直接写 checked='false'  因为true and false 是关键字-->
+<!-- <view checked='{{false}}'> 关键字(需要在双引号之内) </view> -->
+
+
+<!-- <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="i">
+  <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="j">
+    <view wx:if="{{i <= j}}">
+      {{i}} * {{j}} = {{i * j}}
+    </view>
+  </view>
+</view> -->
+
+<!-- <block wx:for="{{[1, 2, 3]}}">
+  <view> {{index}}: </view>
+  <view> {{item}} </view>
+</block> -->
+
+
+
+<!-- wx:key 用法-->
+<!-- <switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
+<button bindtap="switch"> Switch </button>
+<button bindtap="addToFront"> Add to the front </button> -->
+
+<!-- <switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
+<button bindtap="addNumberToFront"> Add to the front </button>
+ -->
+
+
+<!-- 模板定义： 使用name属性作为模板的名字，在template内定义代码片段 -->
+<!--  <template name="odd">
+  <view> odd </view>
+</template>
+<template name="even">
+  <view> even </view>
+</template> -->
+
+<!-- 模板使用： 使用is属性指向模板名字， data属性传入数据 is可以使用 Mustache大括号用法-->
+<!-- <block wx:for="{{[1, 2, 3, 4, 5]}}">
+    <template is="{{item % 2 == 0 ? 'even' : 'odd'}}"/>
+</block>
+ -->
+<!-- 事件
+什么是事件：
+事件是视图层到逻辑层的通讯方式
+事件可以将用户的行为反馈到逻辑层面
+事件可以绑定在组件上，当触发事件的时候，就会执行逻辑层对应的事件处理程序
+在组件中绑定一个事件处理函数。
+如bindtap，当用户点击该组件的时候会在该页面对应的Page中找到相应的事件处理函数。在相应的Page定义中写上相应的事件处理函数，参数是event。
+
+
+事件分类
+tap longtap touchstart touchmove touchcancel touchend longtap, 前缀是bind 和 catch
+事件分为冒泡事件和非冒泡事件
+冒泡事件：当一个组件上的事件被触发后，该事件会向父节点传递。
+非冒泡事件：当一个组件上的事件被触发后，该事件不会向父节点传递。-
+
+事件的绑定：
+事件绑定的写法同组件的属性，以key、value的形式。
+key以bind或catch开头，然后跟上事件的类型，如bindtap, catchtouchstart
+value是一个字符串，需要在对应的Page中定义同名的函数。不然当触发事件的时候会报错。
+bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以阻止冒泡事件向上冒泡。-->
+
+
+
+<view class='container'>
+  <view class='rank-list'>
+    <block wx:for='{{ranks}}' wx:key="{{item.type}}">
+      <view class='rank-item'>
+        <navigator url='../musicList/musicList?type={{item.type}}' class='text'>
+          {{item.text}}
+        </navigator>
+        <view class='arrow'></view>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+ 

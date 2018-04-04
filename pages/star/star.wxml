@@ -1,0 +1,11 @@
+<!--logs.wxml-->
+<view class="container">
+  <view class='title'>星座看运势</view>
+  <view class='content'>
+  	<view class='star' wx:for='{{stars}}' >
+  		<navigator  url='../starList/starList?star={{item.name}}&name={{item.chineseN}}' >
+  			<image src='../../image/{{item.name}}.png'/>
+  		</navigator>
+  	</view>
+  </view>
+</view>

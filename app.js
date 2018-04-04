@@ -54,10 +54,37 @@ App({
 })
 const app = getApp()
 console.log(app.aaa)
+console.log(wx)
 
 
 /**
 *1.如何获取场景值，在 onLaunch 和 onShow中的参数对象中 的 scenes属性值获取
+*
+*
+*路由的相关api
+*1. 打开新页面 wx.navigateTo()  不可以切换到tab页面
+*2.页面重定向 wx.redirectTo()
+*3.页面放回： wx.navigateBack()
+*4.tab切换 wx.switchTab
+*5.重启动： wx.reLauch 理解：场景页面刷新
+*
+*
+*小程序不支持npm直接下载包，支持CommonJs规范
+*使用require引入js文件，只支持相对路径，utils目录下的js文件就是抽离出来的公共模块
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
 *
 *
 */ 

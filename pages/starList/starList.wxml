@@ -1,0 +1,71 @@
+<!--  wxspage.wxml--> 
+<!-- <wxs module="m1">
+var msg = "hello world";
+
+module.exports.message = msg;
+</wxs>
+
+<view> {{m1.message}} </view> -->
+
+<!-- <wxs module="m1">
+
+var getMax = function(array) {
+  var max = undefined;
+  var a = 10;
+  var b = 20;
+  console.log('加法计算')
+  console.log(30 === a + b);
+// 减法运算
+console.log(-10 === a - b);
+console.log(200 === a * b);
+console.log(0.5 === a / b);
+console.log(10 === a % b);
+  console.log(a+b)
+  for (var i = 0; i < array.length; ++i) {
+    max = max === undefined ? 
+      array[i] : 
+      (max >= array[i] ? max : array[i]);
+  }
+  return max;
+}
+
+module.exports.getMax = getMax;
+</wxs>
+
+<!- 调用 wxs 里面的 getMax 函数，参数为 page.js 里面的 array -->
+<!-- <view> {{m1.getMax(array)}} </view> -->
+
+<!--  
+wxs 不依赖于运行时的基础库版本，可以在所有版本的小程序中运行。
+wxs 与 javascript 是不同的语言，有自己的语法，并不和 javascript 一致。
+wxs 的运行环境和其他 javascript 代码是隔离的，wxs 中不能调用其他 javascript 文件中定义的函数，也不能调用小程序提供的API。
+wxs 函数不能作为组件的事件回调。
+由于运行环境的差异，在 iOS 设备上小程序内的 wxs 会比 javascript 代码快 2 ~ 20 倍。在 android 设备上二者运行效率无差异。
+
+wxs模块可以在 wxml文件中 以标签的形式，或者以.wxs文件的形式存在
+
+wxs标签： 有两个属性 module属性必填，模块名字，src属性，引入其他的wxs文件路径
+.wxs文件 ，引入是使用 require（）引入是个相对路径， 使用 module.exports 导出
+
+-->
+
+<view class='container'>
+  <view class='title'>每日运势({{starInfo.time}})：{{star}}</view>
+  <view class='content'>
+    <view class='info'>爱情运势：{{starInfo.love_txt}} </view>
+    <view class='info'>工作运势：{{starInfo.work_txt}} </view>
+    <view class='info'>速配星座：{{starInfo.grxz}} </view>
+    <view class='info'>每日提醒：{{starInfo.day_notice}} </view>
+    <view class='info'>综合概述：{{starInfo.general_txt}} </view>
+    <view class='info'>幸运颜色：{{starInfo.lucky_color}} </view>
+    <view class='info'>幸运方向：{{starInfo.lucky_direction}} </view>
+    <view class='info'>幸运数字：{{starInfo.lucky_num}} </view>
+    <view class='info'>幸运时间：{{starInfo.lucky_time}} </view>
+    <view class='info'>理财/r投资：{{starInfo.money_txt}} </view>
+  <view class='info'>理财投资：<image wx:for='{{money_star}}' src='../../image/fivestar.png'/></view> 
+  <view class='info'>爱情运势：<image wx:for='{{love_star}}' src='../../image/fivestar.png'/></view>  
+  <view class='info'>综合运势：<image wx:for='{{summary_star}}' src='../../image/fivestar.png'/></view>  
+  <view class='info'>工作状况：<image wx:for='{{work_star}}' src='../../image/fivestar.png'/></view>  
+    {{aa}}
+  </view>
+</view>
